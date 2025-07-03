@@ -65,14 +65,14 @@ export default function Card(props) {
       <div className="flex flex-col items-centerw-8/10 h-auto gap-4">
         {props.is_video ? (
           <video
-            className="w-full h-200 object-cover border-none rounded-lg"
+            className="w-full xl:h-200 md:h-150 h-100 object-cover border-none rounded-lg"
             controls
             src={props.media.reddit_video.fallback_url}
           />
         ) : null}
         {props.post_hint === "image" && props.selftext === "" ? (
           <Image
-            className="w-full h-200 object-contain border-none rounded-lg"
+            className="w-full xl:h-200 md:h-150 h-100 object-contain border-none rounded-lg"
             src={props.url}
             alt={props.title}
             width={500}
